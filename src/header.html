@@ -1,0 +1,31 @@
+{{ define "header" }}
+<header>
+  <div class="bg-do-yellow pb-10 lg:pb-10">
+    <div class="mx-auto max-w-7xl pt-4 px-4 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-20">
+      <div class="max-w-lg mx-auto">
+        <h1 class="mt-4 md:mt-10 text-3xl sm:text-6xl tracking-tight leading-none text-do-gray">
+          Supercharge your web applications
+        </h1>
+        <p class="mt-12 text-base text-gray-700">
+          Alias fugiat placeat, nostrum exercitationem blanditiis, unde sequi, eligendi dolorem id
+          illum officiis voluptas ea asperiores ducimus quaerat iusto similique suscipit tempora!
+        </p>
+        <div class="mt-12 mb-20 flex items-center gap-x-6">
+          <a href="#" class="border-2 border-gray-800 bg-do-teal-300 px-3.5 py-2.5 text-sm
+          md:text-base text-white shadow-sm hover:bg-do-teal-200
+          focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+          focus-visible:outline-do-teal-300">Documentation</a>
+        </div>
+      </div>
+
+      <div class="mt-20 md:mx-auto md:max-w-2xl lg:mx-0">
+        {{ template "terminal" . }}
+      </div>
+    </div>
+  </div>
+
+  <div class="relative h-48 bg-black break--down">
+    <div class="absolute h-[186px] w-full top-0 bg-do-yellow break--down"></div>
+  </div>
+</header>
+{{ end }}

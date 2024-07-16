@@ -1,0 +1,90 @@
+{{ define "faq" -}}
+<div class="mx-auto max-w-7xl px-4 py-10 lg:py-20">
+  <div class="divide-y divide-black">
+    <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
+    <dl class="mt-16  divide-y divide-black">
+      <div x-data="{ selected: null }" class="py-16">
+        <dt>
+          <!-- Expand/collapse question button -->
+          <button
+            @click="selected !== 1 ? selected = 1 : selected = null"
+            type="button"
+            class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="faq-0"
+            aria-expanded="false"
+          >
+            <span class="text-base font-semibold">Proin id purus sagittis, tincidunt felis ac?</span>
+            <span class="ml-6 flex h-7 items-center">
+              <!--
+                Icon when question is collapsed.
+
+                Item expanded: "hidden", Item collapsed: ""
+              -->
+              <svg x-show="selected == 1 ? '' : 'hidden' " class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+              </svg>
+              <!--
+                Icon when question is expanded.
+
+                Item expanded: "", Item collapsed: "hidden"
+              -->
+              <svg x-show="selected == 1 ? 'hidden' : '' " class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+              </svg>
+            </span>
+          </button>
+        </dt>
+        <dd
+          x-ref="container1"
+          :style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+          class="mt-2 pr-12 transition-all max-h-0 duration-700 overflow-hidden"
+          id="faq-0"
+        >
+          <p class="my-8 text-base text-gray-600">commodo purus. Ut quis nisi dui. Aliquam est
+          nisi, varius non iaculis eu, feugiat in justo. Ut dignissim ac mauris vel cursus. Orci
+          varius natoque penatibus et magnis dis parturient montes.</p>
+        </dd>
+      </div>
+
+      <div x-data="{ selected: null }" class="py-16">
+        <dt>
+          <!-- Expand/collapse question button -->
+          <button
+            @click="selected !== 2 ? selected = 2 : selected = null"
+            type="button"
+            class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="faq-0"
+            aria-expanded="false"
+          >
+            <span class="text-base font-semibold">Aenean mauris tellus, convallis eget faucibus quis?</span>
+            <span class="ml-6 flex h-7 items-center">
+              <!--
+                Icon when question is collapsed.
+
+                Item expanded: "hidden", Item collapsed: ""
+              -->
+              <svg x-show="selected == 2 ? '' : 'hidden' " class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+              </svg>
+              <!--
+                Icon when question is expanded.
+
+                Item expanded: "", Item collapsed: "hidden"
+              -->
+              <svg x-show="selected == 2 ? 'hidden' : '' " class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+              </svg>
+            </span>
+          </button>
+        </dt>
+        <dd
+          x-ref="container2"
+          :style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+          class="mt-2 pr-12 transition-all max-h-0 duration-700 overflow-hidden"
+          id="faq-0"
+        >
+          <p class="my-8 text-base text-gray-600">Fermentum non massa. Vestibulum erat nisl, varius euismod quam vel, suscipit ornare risus. Aliquam erat volutpat. Proin vitae rutrum enim. Nullam consequat lorem et elit efficitur, ac sodales leo</p>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+{{ end -}}

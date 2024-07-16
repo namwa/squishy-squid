@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] { display: none !important; }
+
+.break--down {
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 50%, 0 30%);
+}
+
+.break--up {
+  clip-path: polygon(48% 0, 100% 0, 100% 42%, 50% 29%, 0 41%, 0 0);
+}
+
+.bubble {
+  @apply relative max-w-sm bg-white p-6 border-4 border-black before:absolute
+  after:absolute;
+}
+
+.tilt-right:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid black;
+  border-top: 15px solid black;
+  border-bottom: 15px solid transparent;
+  left: 15px;
+  bottom: -34px;
+}
+
+.tilt-right:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid white;
+  border-top: 15px solid white;
+  border-bottom: 15px solid transparent;
+  left: 11px;
+  bottom: -23px;
+}
+
+.nav-link {
+  @apply px-3 py-2 hover:text-gray-800 hover:underline hover:underline-offset-4
+}
+.nav-link-mobile {
+  @apply py-2 pl-3 pr-4 text-base block border-l-4 text-gray-500  border-transparent hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700
+}
+
+.nav-link-mobile__active {
+  @apply border-do-teal-200 text-do-teal-300
+}

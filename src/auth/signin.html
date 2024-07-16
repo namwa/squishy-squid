@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-white">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in</title>
+
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body class="h-full">
+  <div class="min-h-screen flex">
+    <main class="w-full lg:w-3/5 px-4 py-4 sm:px-6 lg:px-20 xl:px-24">
+      <header class="flex justify-between items-center">
+        <a href="/" class="flex flex-1 flex-shrink-0 items-center text-base lg:text-xl font-bold">
+          <span class="text-do-gray">Squishy</span>
+          <span class="text-do-teal-200">Squid</span>
+        </a>
+
+        <a href="/signup" class="underline hover:text-do-teal-300">Sign up</a>
+      </header>
+      <div class="flex flex-col justify-center h-full">
+        <h2 class="mt-8 text-2xl font-bold leading-9 tracking-tight text-do-gray">Sign in</h2>
+        <div class="mt-16">
+          <form action="#" method="POST" class="space-y-6">
+            <div>
+              <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+              <div class="mt-2">
+                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full py-3.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-do-teal-300 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+
+            <div>
+              <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+              <div class="mt-2">
+                <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full py-3.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-do-teal-300 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+            <div class="text-sm text-right leading-6">
+              <a href="/reset-password" class="font-semibold text-do-teal-300 hover:text-do-teal-200">Forgot password?</a>
+            </div>
+
+            <div>
+              <button type="submit" class="flex w-full justify-center bg-do-teal-300 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-do-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-do-teal-300">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <aside class="hidden lg:block lg:w-2/5">
+      <img class="max-h-screen w-full object-fill" src="/images/squishy_squid_bg.jpg" alt="">
+    </aside>
+  </div>
+</body>
+</html>

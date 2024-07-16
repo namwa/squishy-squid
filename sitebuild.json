@@ -1,0 +1,47 @@
+{
+  "basepath": "src",
+  "pages": {
+    "index.html": {
+      "sources": [
+        "layout.html",
+        "partials/nav.html",
+        "header.html",
+        "partials/terminal.html",
+        "features.html",
+        "testimonials.html",
+        "partials/speech-bubble.html",
+        "cta.html",
+        "footer.html"
+      ],
+      "url": "/"
+    },
+    "signin.html": {
+      "sources": [
+        "auth/signin.html"
+      ],
+      "url": "/signin"
+    },
+    "signup.html": {
+      "sources": [
+        "auth/signup.html"
+      ],
+      "url": "/signup"
+    },
+    "reset-pwd.html": {
+      "sources": [
+        "auth/reset-pwd.html"
+      ],
+      "url": "/reset-password"
+    },
+    "pricing-layout.html": {
+      "sources": [
+        "pricing/pricing-layout.html",
+        "partials/nav.html",
+        "pricing/price-cards.html",
+        "pricing/faq.html",
+        "footer.html"
+      ],
+      "url": "/pricing"
+    }
+  }
+}

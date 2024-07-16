@@ -1,0 +1,80 @@
+{{ define "nav" }}
+<nav
+  x-data="{ open: false, toggle() { this.open = !this.open } }"
+  class="border border-gray-900 border-b-2"
+>
+  <div class="max-w-6xl mx-auto py-4 px-4">
+    <div class="flex items-center">
+      <a href="/" class="flex flex-1 flex-shrink-0 items-center text-base lg:text-xl font-bold">
+        <span class="text-do-gray">Squishy</span>
+        <span class="text-do-teal-200">Squid</span>
+      </a>
+      <div class="hidden sm:ml-6 md:block">
+        <div class="flex space-x-4">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/pricing" class="nav-link">Pricing</a>
+          <a href="#" class="nav-link">Blog</a>
+          <a href="#" class="nav-link">Docs</a>
+          <a href="#" class="nav-link">Contact</a>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center flex-shrink-0">
+        <a href="/signup" class="inline-flex items-center gap-x-1.5 border-2 border-gray-800 bg-do-teal-300 hover:bg-do-teal-200 text-white px-3 py-1.5 ml-2">
+          <span>Sign up</span>
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="flex items-center md:hidden">
+        <!-- Mobile menu button -->
+        <button @click="toggle()" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-do-teal-100" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div
+    id="menu"
+    x-show="open"
+    class="absolute top-0 inset-x-0 transition transform origin-top-right md:hidden"
+  >
+    <div class="shadow-lg border-b-2 border-black bg-white">
+      <div class="flex items-center justify-between px-4 py-4 border-b-2 border-black">
+        <a href="/" class="flex flex-shrink-0 items-center text-base font-bold">
+          <span class="text-do-gray">Squishy</span>
+          <span class="text-do-teal-200">Squid</span>
+        </a>
+
+        <div class="-mr-2">
+          <button @click="toggle()" type="button" id="close-button" class="rounded-md p-2 text-gray-400
+            hover:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-do-teal-300">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="my-4">
+        <nav class="grid text-center">
+          <a href="/signin" class="nav-link-mobile">Sign in</a>
+          <a href="/pricing" class="nav-link-mobile">Pricing</a>
+          <a href="#" class="nav-link-mobile">Blog</a>
+          <a href="#" class="nav-link-mobile">Docs</a>
+          <a href="#" class="nav-link-mobile">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</nav>
+{{ end }}

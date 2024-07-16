@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+
+    <link rel="stylesheet" href="/css/output.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js"></script>
+  </head>
+  <body x-cloak x-data="{ isNavOpen: false }" class="h-screen flex flex-col">
+
+    {{ template "nav" . }}
+
+    <main class="grow">
+      {{ template "price-cards" . }}
+      {{ template "faq" . }}
+    </main>
+
+    {{ template "footer" . }}
+
+  </body>
+</html>
