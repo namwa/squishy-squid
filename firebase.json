@@ -1,10 +1,32 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/signin",
+        "destination": "/signin.html"
+      },
+      {
+        "source": "/signup",
+        "destination": "/signup.html"
+      },
+      {
+        "source": "/reset-password",
+        "destination": "/reset-pwd.html"
+      },
+      {
+        "source": "/pricing",
+        "destination": "/pricing-layout.html"
+      },
+      {
+        "source": "/",
+        "destination": "/index.html"
+      }
     ]
   }
 }

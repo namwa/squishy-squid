@@ -13,3 +13,9 @@ Run ```sitebuild serve``` on the root diretory.
 ### For track the styles changing
 
 Inside `src` directory, run ```npm run watch```
+
+## For production
+
+Run ```sitebuild genroutes``` to generate routes mapping for firebase.
+
+Copy generated

@@ -1,5 +1,5 @@
 {
-  "basepath": "src",
+  "sourceDir": "src",
   "pages": {
     "index.html": {
       "sources": [
