@@ -1,6 +1,8 @@
-# Squishy Squid landing page
+# Squishy Squid Brutalism style website
 
 This site is built with HTML, Tailwind CSS and a hand built Static Site Generator (SSG).
+
+[Squishy Squid website](https://squishysquid.web.app/)
 
 ## To start the project
 
